@@ -14,7 +14,7 @@ folly_version = '2018.10.22.00'
 Pod::Spec.new do |s|
   s.name                    = "React"
   s.version                 = version
-  s.summary                 = package["description"]
+  s.summary                 = "A framework for building native apps using React"
   s.description             = <<-DESC
                                 React Native apps are built using the React JS
                                 framework, and render directly to native UIKit
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
                                 quality or capability.
                              DESC
   s.homepage                = "http://facebook.github.io/react-native/"
-  s.license                 = package["license"]
+  s.license                 = "MIT"
   s.author                  = "Facebook"
   s.source                  = source
   s.default_subspec         = "Core"
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   s.cocoapods_version       = ">= 1.2.0"
 
   s.subspec "Core" do |ss|
-    ss.dependency             "yoga", "#{package["version"]}.React"
+    ss.dependency             "yoga", "#{version}.React"
     ss.source_files         = "React/**/*.{c,h,m,mm,S,cpp}"
     ss.exclude_files        = "**/__tests__/*",
                               "IntegrationTests/*",
