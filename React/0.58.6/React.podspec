@@ -3,19 +3,10 @@
 #
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
-
-require "json"
-
-package = JSON.parse(File.read(File.join(__dir__, "package.json")))
-version = package['version']
+version = "0.58.6"
 
 source = { :git => 'https://github.com/facebook/react-native.git' }
-if version == '1000.0.0'
-  # This is an unpublished version, use the latest commit hash of the react-native repo, which we’re presumably in.
-  source[:commit] = `git rev-parse HEAD`.strip
-else
-  source[:tag] = "v#{version}"
-end
+source[:tag] = "v#{version}"
 
 folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 folly_version = '2018.10.22.00'
@@ -23,7 +14,7 @@ folly_version = '2018.10.22.00'
 Pod::Spec.new do |s|
   s.name                    = "React"
   s.version                 = version
-  s.summary                 = package["description"]
+  s.summary                 = "A framework for building native apps using React"
   s.description             = <<-DESC
                                 React Native apps are built using the React JS
                                 framework, and render directly to native UIKit
@@ -38,7 +29,7 @@ Pod::Spec.new do |s|
                                 quality or capability.
                              DESC
   s.homepage                = "http://facebook.github.io/react-native/"
-  s.license                 = package["license"]
+  s.license                 = "MIT"
   s.author                  = "Facebook"
   s.source                  = source
   s.default_subspec         = "Core"
@@ -49,7 +40,7 @@ Pod::Spec.new do |s|
   s.cocoapods_version       = ">= 1.2.0"
 
   s.subspec "Core" do |ss|
-    ss.dependency             "yoga", "#{package["version"]}.React"
+    ss.dependency             "yoga", "#{version}.React"
     ss.source_files         = "React/**/*.{c,h,m,mm,S,cpp}"
     ss.exclude_files        = "**/__tests__/*",
                               "IntegrationTests/*",
