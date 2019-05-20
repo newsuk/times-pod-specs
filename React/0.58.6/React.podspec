@@ -3,19 +3,10 @@
 #
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
-
-require "json"
-
-package = JSON.parse(File.read(File.join(__dir__, "package.json")))
-version = package['version']
+version = "0.58.6"
 
 source = { :git => 'https://github.com/facebook/react-native.git' }
-if version == '1000.0.0'
-  # This is an unpublished version, use the latest commit hash of the react-native repo, which we’re presumably in.
-  source[:commit] = `git rev-parse HEAD`.strip
-else
-  source[:tag] = "v#{version}"
-end
+source[:tag] = "v#{version}"
 
 folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 folly_version = '2018.10.22.00'
