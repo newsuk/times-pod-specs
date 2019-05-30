@@ -12,17 +12,15 @@
   "platforms": {
     "ios": "9.0"
   },
-  "swift_version": "4.2",
+  "swift_versions": "4.2",
   "source": {
-    "git": "https://github.com/newsuk/times-components-ios-artifacts",
+    "git": "https://github.com/newsuk/times-components.git",
     "tag": "0.7.158"
   },
-  "resource_bundles": {
-    "TimesComponents": [
-      "assets/js/index.ios.bundle",
-      "assets/res/*"
-    ]
-  },
+  "resources": [
+    "ios-app/ios-assets/js/index.ios.bundle",
+    "ios-app/ios-assets/res/*"
+  ],
   "dependencies": {
     "React/Core": [
       "0.58.6"
@@ -75,5 +73,6 @@
     "glog": [
       "0.3.5"
     ]
-  }
+  },
+  "swift_version": "4.2"
 }
