@@ -1,0 +1,80 @@
+{
+  "name": "TimesComponents",
+  "version": "0.7.173",
+  "summary": "Times iOS React components",
+  "description": "All the things for Times iOS React components including dependencies",
+  "homepage": "https://www.news.co.uk",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "News UK",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "swift_versions": "4.2",
+  "source": {
+    "git": "https://github.com/newsuk/times-components-ios-artifacts",
+    "tag": "0.7.173"
+  },
+  "resource_bundles": {
+    "TimesComponents": [
+      "assets/js/index.ios.bundle",
+      "assets/res/*"
+    ]
+  },
+  "dependencies": {
+    "React/Core": [
+      "0.58.6"
+    ],
+    "React/CxxBridge": [
+      "0.58.6"
+    ],
+    "React/RCTAnimation": [
+      "0.58.6"
+    ],
+    "React/RCTCameraRoll": [
+      "0.58.6"
+    ],
+    "React/RCTImage": [
+      "0.58.6"
+    ],
+    "React/RCTLinkingIOS": [
+      "0.58.6"
+    ],
+    "React/RCTNetwork": [
+      "0.58.6"
+    ],
+    "React/RCTText": [
+      "0.58.6"
+    ],
+    "React/RCTGeolocation": [
+      "0.58.6"
+    ],
+    "React/RCTActionSheet": [
+      "0.58.6"
+    ],
+    "React/RCTWebSocket": [
+      "0.58.6"
+    ],
+    "React/DevSupport": [
+      "0.58.6"
+    ],
+    "React/ART": [
+      "0.58.6"
+    ],
+    "yoga": [
+      "0.58.6.React"
+    ],
+    "DoubleConversion": [
+      "1.1.6"
+    ],
+    "Folly": [
+      "2018.10.22.00"
+    ],
+    "glog": [
+      "0.3.5"
+    ]
+  },
+  "swift_version": "4.2"
+}
