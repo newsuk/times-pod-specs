@@ -1,0 +1,27 @@
+{
+  "name": "TimesComponents",
+  "version": "0.17.65",
+  "summary": "Times iOS React components",
+  "description": "All the things for Times iOS React components including dependencies",
+  "homepage": "https://www.news.co.uk",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "News UK",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "swift_versions": "4.2",
+  "source": {
+    "git": "https://github.com/newsuk/times-components-ios-artifacts",
+    "tag": "0.17.65"
+  },
+  "resource_bundles": {
+    "TimesComponents": [
+      "assets/js/*",
+      "assets/res/*"
+    ]
+  },
+  "swift_version": "4.2"
+}
