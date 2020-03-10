@@ -19,7 +19,7 @@
   },
   "resource_bundles": {
     "TimesComponents": [
-      "assets/js/index.ios.bundle",
+      "assets/js/*",
       "assets/res/*"
     ]
   },
